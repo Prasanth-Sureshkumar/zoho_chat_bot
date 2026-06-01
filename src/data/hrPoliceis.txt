@@ -1,0 +1,53 @@
+title: Maternity Leave Policy
+category: leave
+source: sample-hr-policy
+Eligible employees may apply for maternity leave by submitting a request to HR with the expected delivery date and supporting medical documents.
+
+The leave request should be submitted as early as possible so that the manager and HR team can plan work coverage.
+
+Employees returning from maternity leave should coordinate with HR and their manager for joining formalities, role continuity, and any approved flexible working arrangements.
+---
+title: Reimbursement Policy
+category: finance
+source: sample-hr-policy
+Business expenses are reimbursable when they are approved by the reporting manager and supported by valid invoices or receipts.
+
+Employees should submit reimbursement claims through the approved HR or finance system within the configured claim submission window.
+
+Claims without receipts, approval, or a clear business purpose may be rejected or returned for clarification.
+---
+title: Attendance Policy
+category: attendance
+source: sample-hr-policy
+Employees are expected to record attendance through the official attendance system every working day.
+
+Late arrivals, early departures, missed punches, or regularization requests should be corrected according to the attendance workflow.
+
+Repeated attendance violations may be reviewed by the manager and HR as part of employee discipline and performance processes.
+---
+title: Work From Home Policy
+category: workplace
+source: sample-hr-policy
+Work from home may be allowed when the employee's role, project needs, manager approval, and company policy permit remote work.
+
+Employees working from home must remain available during working hours, attend required meetings, and maintain confidentiality of company data.
+
+Managers may revoke or modify work from home arrangements when business requirements, collaboration needs, or performance concerns require office presence.
+---
+title: Payroll Policy
+category: payroll
+source: sample-hr-policy
+Payroll is processed according to the organization's payroll calendar, cutoff date, and salary credit schedule.
+
+Salary changes, unpaid leave, reimbursements, deductions, and arrears are included only when submitted and approved before the payroll cutoff date.
+
+Employees should contact HR or payroll support if salary components, deductions, or bank account details appear incorrect.
+---
+title: Notice Period Policy
+category: separation
+source: sample-hr-policy
+Employees resigning from the organization must submit resignation through the approved system or written process.
+
+The applicable notice period depends on employment agreement, grade, role, local law, and company policy.
+
+Release date, notice period recovery, knowledge transfer, asset return, and final settlement are coordinated by the manager, HR, IT, and payroll teams.

@@ -1,0 +1,27 @@
+{
+  "name": "hr-chat-assistant",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "start": "npm run build && node index.js",
+    "seed:policies": "node scripts/seed-policies.js",
+    "run:server": "bash scripts/run.sh",
+    "test": "node --test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@vitejs/plugin-react": "^6.0.2",
+    "axios": "^1.16.1",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "pg": "^8.21.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "vite": "^8.0.16"
+  }
+}
