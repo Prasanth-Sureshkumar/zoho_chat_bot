@@ -1,3 +1,168 @@
+# Zoho OAuth & Permissions Setup Prerequisites
+
+## 1. Zoho Organization Account
+
+### Requirements
+
+Before integrating the HR Chat Assistant with Zoho APIs, ensure the following prerequisites are completed:
+
+* Active Zoho account
+* Admin access to Zoho People organization
+* Permission to create OAuth clients in Zoho API Console
+
+---
+
+# API Console Setup
+
+## 2. Create Server-to-Server OAuth Client
+
+### Step 1: Open Zoho API Console
+
+Navigate to:
+
+* Zoho API Console
+
+---
+
+### Step 2: Create OAuth Client
+
+1. Click **Add Client**
+2. Select:
+
+   * **Server-based Applications**
+3. Fill the required fields:
+
+   * Client Name
+   * Homepage URL
+   * Authorized Redirect URI
+
+---
+
+### Development Redirect URI Example
+
+```env
+http://localhost:3000/auth/callback
+```
+
+### Production Redirect URI Example
+
+```env
+https://yourdomain.com/auth/callback
+```
+
+---
+
+### Step 3: Save Credentials
+
+After successful client creation, Zoho will generate:
+
+* Client ID
+* Client Secret
+
+Store them securely in backend environment variables.
+
+---
+
+## Backend Environment Configuration
+
+```env
+ZOHO_CLIENT_ID=xxxx
+ZOHO_CLIENT_SECRET=xxxx
+ZOHO_REDIRECT_URI=http://localhost:3000/auth/callback
+```
+
+---
+
+# Zoho People Permissions Setup
+
+## 3. Enable Employee Access Permissions
+
+### Navigation Path
+
+```text
+Zoho People
+→ Settings
+→ Manage Accounts
+→ User Access Control
+→ Function Based Permissions
+```
+
+---
+
+## 4. Enable Permissions For
+
+Grant permissions to:
+
+* Team Members
+* Employee Self Service Users
+
+---
+
+## 5. Required Module Access
+
+Enable access for the following modules based on application requirements:
+
+| Module           | Required |
+| ---------------- | -------- |
+| Leave            | Yes      |
+| Attendance       | Yes      |
+| Employee Profile | Yes      |
+| Shift            | Optional |
+| Timesheet        | Optional |
+| Holidays         | Yes      |
+| Salary/Payroll   | Optional |
+
+---
+
+## 6. Common Permission Errors
+
+If permissions or scopes are missing, APIs may return:
+
+```text
+No permission
+Invalid OAuth scope
+Unauthorized
+```
+
+---
+
+# Required OAuth Scopes
+
+## 7. Minimum Required Scopes
+
+Include the following scopes while generating OAuth authorization tokens:
+
+```env
+ZOHOPEOPLE.employee.ALL
+ZOHOPEOPLE.forms.ALL
+ZOHOPEOPLE.leave.ALL
+ZOHOPEOPLE.attendance.ALL
+```
+
+---
+
+## 8. Payroll/Salary Scope
+
+For payroll or salary APIs, additionally include:
+
+```env
+ZOHOPEOPLE.payroll.ALL
+```
+
+---
+
+# OAuth Authorization URL Example
+
+## 9. OAuth Login URL
+
+```text
+https://accounts.zoho.in/oauth/v2/auth?
+scope=ZOHOPEOPLE.employee.ALL,ZOHOPEOPLE.leave.ALL&
+client_id=YOUR_CLIENT_ID&
+response_type=code&
+access_type=offline&
+redirect_uri=http://localhost:3000/auth/callback
+
 # HR Chat Assistant - Technical Documentation
 
 ## 1. System Overview
@@ -30,6 +195,8 @@ Frontend:
 - Build config: `vite.config.mjs`
 
 ---
+
+```
 
 ## 2. Runtime Architecture
 
