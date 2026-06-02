@@ -591,7 +591,17 @@ Vite config (`vite.config.mjs`):
 
 ---
 
-## 15. End-to-End Flow Summary
+## 15. State Diagram
+<img width="7547" height="4995" alt="image" src="https://github.com/user-attachments/assets/5edb897b-8e32-48e2-aa50-d30badc32826" />
+
+---
+
+## 16. Architecture Diagram
+<img width="7539" height="2660" alt="image" src="https://github.com/user-attachments/assets/6bf507a1-65fe-4ceb-a0cb-91daaedfd392" />
+
+---
+
+## 17. End-to-End Flow Summary
 
 User asks policy question:
 1. Frontend sends message to `/api/chat` with session ID.
@@ -610,3 +620,4 @@ User asks HR data question (leave/salary/etc):
 5. Raw data normalized/formatted.
 6. Optional Ollama summarization applied.
 7. Final answer returned with structured data blocks for UI rendering.
+
